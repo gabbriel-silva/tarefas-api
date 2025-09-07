@@ -1,0 +1,17 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: tarefas-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: tarefasdb
+      MYSQL_USER: tarefas
+      MYSQL_PASSWORD: tarefas
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - tarefas_mysql_data:/var/lib/mysql
+    command: ["--default-authentication-plugin=mysql_native_password"]
+volumes:
+  tarefas_mysql_data:

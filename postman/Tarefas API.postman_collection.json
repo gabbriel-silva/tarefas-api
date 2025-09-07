@@ -1,0 +1,165 @@
+{
+  "info": {
+    "name": "Tarefas API",
+    "_postman_id": "f2c0d4e0-0000-0000-0000-000000000001",
+    "description": "CRUD de tarefas para o trabalho de Desenvolvimento Web Back end",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Criar tarefa (POST) - com Nome/RU",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"nome\": \"Desenvolvimento da API\", \"dataEntrega\": \"2025-12-12\", \"responsavel\": \"{{ALUNO_NOME}} RU: {{ALUNO_RU}}\"}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/tarefas",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "tarefas"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Criar tarefa (POST) - exemplo 2",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"nome\": \"Estudar Spring Data JPA\", \"dataEntrega\": \"2025-10-01\", \"responsavel\": \"{{ALUNO_NOME}}\"}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/tarefas",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "tarefas"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Criar tarefa (POST) - exemplo 3",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"nome\": \"Montar prints no Postman\", \"dataEntrega\": \"2025-10-05\", \"responsavel\": \"{{ALUNO_NOME}}\"}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/tarefas",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "tarefas"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Listar tarefas (GET)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/tarefas",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "tarefas"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Buscar por ID (GET)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/tarefas/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "tarefas",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Atualizar (PUT)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"nome\": \"Desenvolvimento da API - Atualizado\", \"dataEntrega\": \"2025-12-12\", \"responsavel\": \"{{ALUNO_NOME}} RU: {{ALUNO_RU}}\"}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/tarefas/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "tarefas",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Remover (DELETE)",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "{{baseUrl}}/api/tarefas/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "tarefas",
+            "1"
+          ]
+        }
+      }
+    }
+  ]
+}
